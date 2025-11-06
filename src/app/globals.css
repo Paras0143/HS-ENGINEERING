@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-family-sans: var(--font-geist-sans);
+  --font-family-mono: var(--font-geist-mono);
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Brand color system (defaults aligned with current blue palette) */
+:root {
+  /* Professional light green palette */
+  --brand-50: #edf9f3;
+  --brand-100: #d7f2e6;
+  --brand-200: #b9e7d3;
+  --brand-300: #8fd8bb;
+  --brand-400: #66caa4;
+  --brand-500: #2bb673; /* primary */
+  --brand-600: #22a366; /* primary hover */
+  --brand-700: #1b8a56;
+  --brand-800: #166f46;
+  --brand-900: #0f5536;
+  --brand-on: #ffffff;
+}
+
+.text-brand { color: var(--brand-600); }
+.text-brand-strong { color: var(--brand-700); }
+.bg-brand { background-color: var(--brand-600); color: var(--brand-on); }
+.bg-brand:hover { background-color: var(--brand-700); }
+.border-brand { border-color: var(--brand-600); }
+.bg-brand-tint { background-color: var(--brand-50); }
+.text-on-brand { color: var(--brand-on); }
+
+/* Hero gradient using brand tints */
+.brand-hero {
+  background-image: linear-gradient(135deg, var(--brand-50), #ffffff 40%, #f8fafc);
+}
+
+/* Logo sizing helper for consistent fit */
+.brand-logo { height: 44px; width: auto; }
+@media (min-width: 1024px) {
+  .brand-logo { height: 48px; }
+}
