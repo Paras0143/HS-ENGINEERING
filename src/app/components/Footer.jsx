@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-300 dark:border-gray-800 pt-8 text-center text-sm">
-          <p>Copyright 2024 Airtech India . All Rights Reserved.</p>
+          <p>Copyright 2024 HS ENGINEERING . All Rights Reserved.</p>
           <p className="mt-2">Website Designed By</p>
         </div>
       </div>
